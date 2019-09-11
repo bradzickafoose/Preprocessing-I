@@ -158,6 +158,7 @@ h2,
 h3 {
   font-family: 'Open Sans', sans-serif;
 }
+/* Mixins */
 /* Header */
 header {
   display: flex;
@@ -180,6 +181,12 @@ header nav {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 530px) {
+  header nav {
+    margin-top: 1rem;
+    width: 90%;
+  }
+}
 header nav a {
   color: #283e4a;
   text-decoration: none;
@@ -191,10 +198,10 @@ main {
   padding: 1rem;
 }
 .ProfileCard .ProfileCard__ProfileImage {
-  background-color: #eee;
+  background-color: #f1f1f1;
   border: 1px solid #ddd;
   border-radius: 50%;
-  box-shadow: 1px 1px 6px rgba(17, 17, 17, 0.13);
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.15);
   padding: 0.5%;
 }
 .ProfileCard .ProfileCard__User {
@@ -212,4 +219,21 @@ main {
 .ProfileCard .ProfileCard__User .ProfileCard__User_Info h1 {
   font-weight: bold;
   font-size: 1.4rem;
+}
+.AboutCard,
+.ExperienceCard,
+.EducationCard {
+  background-color: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 2px;
+  border-top: 4px solid #0077b5;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.AboutCard h2,
+.ExperienceCard h2,
+.EducationCard h2 {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
