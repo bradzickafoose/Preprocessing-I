@@ -236,4 +236,29 @@ main {
 .EducationCard h2 {
   font-weight: bold;
   font-size: 1.2rem;
+  margin-bottom: 1%;
+}
+.ExperienceCard .ExperienceCard__Items .ExperienceCard__Item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  font-size: 0.8rem;
+}
+.ExperienceCard .ExperienceCard__Items .ExperienceCard__Item h3 {
+  font-weight: bold;
+}
+.ExperienceCard .ExperienceCard__Items .ExperienceCard__Item .ExperienceCard__Item_Company {
+  text-align: left;
+}
+.EducationCard .EducationCard__Items .EducationCard__Item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+}
+.EducationCard .EducationCard__Items .EducationCard__Item:last-child {
+  margin-bottom: 0;
+}
+.EducationCard .EducationCard__Items .EducationCard__Item .EducationCard__Item_Image {
+  width: 10%;
+  margin-right: 2%;
 }
