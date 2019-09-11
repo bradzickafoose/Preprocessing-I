@@ -3,6 +3,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap');
+@HeaderFont: 'Open Sans', sans-serif;
+@BodyFont: 'Montserrat', sans-serif;
 
 html,
 body,
@@ -110,6 +113,7 @@ section {
 
 body {
 	line-height: 1;
+	font-family: @BodyFont;
 }
 
 ol,
@@ -138,6 +142,7 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
 	box-sizing: border-box;
+	max-width: 100%;
 }
 
 html,
@@ -145,21 +150,77 @@ body {
 	height: 100%;
 }
 
+body {
+	line-height: 1.2;
+}
+
+h1,h2,h3 {
+	font-family: @HeaderFont;
+}
 /* Header */
 
 header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 1rem;
+
+	@media (max-width: 530px) {
+		flex-direction: column;
+	}
 
 	h1 {
 		font-size: 2rem;
+		width: 35%;
+		color: #0077b5;
 	}
+
 	nav {
 		width: 60%;
+		display: flex;
+		justify-content: space-between;
+
 		a {
 			color: #283e4a;
 			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+main {
+	padding: 1rem;
+}
+
+.ProfileCard {
+
+	.ProfileCard__ProfileImage{
+		background-color: #eee;
+		border: 1px solid #ddd;
+		border-radius: 50%;
+		box-shadow: 1px 1px 6px rgba(17, 17, 17, 0.13);
+		padding: .5%;
+	}
+	.ProfileCard__User {
+		display: flex;
+		flex-direction: column;
+		margin-top: -10%;
+		padding: 0 2%;
+
+		img {
+			width: 20%;
+		}
+		
+		.ProfileCard__User_Info {
+			margin-top: 2%;
+
+			h1 {
+				font-weight: bold;
+				font-size: 1.4rem;
+			}
 		}
 	}
 }
