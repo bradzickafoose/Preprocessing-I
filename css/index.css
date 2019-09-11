@@ -134,3 +134,19 @@ html,
 body {
   height: 100%;
 }
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 2rem;
+}
+header nav {
+  width: 60%;
+}
+header nav a {
+  color: #283e4a;
+  text-decoration: none;
+}
