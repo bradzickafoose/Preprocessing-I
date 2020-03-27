@@ -1,10 +1,11 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
-  <title>My Resume</title>
+  <title>Brad Zickafoose | BlinkedIn</title>
 
   <link rel="stylesheet" href="css/index.css">
 
@@ -14,6 +15,83 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <header>
+    <h1>BlinkedIn</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#footer">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="ProfileCard">
+      <div class="ProfileCard__Cover">
+        <img src="/img/cover.jpg" alt="" class="ProfileCard__CoverImage">
+      </div>
+      <div class="ProfileCard__User">
+        <img src="/img/profile.jpg" alt="" class="ProfileCard__ProfileImage">
+        <div class="ProfileCard__User_Info">
+        <h1 class="ProfileCard__Heading">Bradley Zickafoose</h1>
+        <div class="ProfileCard__Description">
+          Full Stack Web Development
+      </div>
+      <div class="ProfileCard__Location">
+        Durham, North Carolina
+      </div>
+    </div>
+    </section>
+    <section class="AboutCard" id="about">
+      <h2 class="AboutCard__Title">About</h2>
+      <div class="AboutCard__Description">Multidisciplinary designer, digital marketer, project manager, and avid autodidact with more than a decade of experience. Recognized for exceptional attitude and problem solving abilities. I have managed and worked with both large and small teams as well as remote and out-sourced teams.</div>
+    </section>
+    <section class="ExperienceCard" id="experience">
+      <h2 class="ExperienceCard__Title">Experience</h2>
+      <div class="ExperienceCard__Items">
+        <div class="ExperienceCard__Item">
+          <h3>Co-Founder</h3>
+          <div class="ExperienceCard__Item_Company">
+            Viziworx Creative
+          </div>
+          <div class="ExperienceCard__Item_Date">Jan 2008 - Present</div>
+        </div>
+        <div class="ExperienceCard__Item">
+            <h3>Photographer</h3>
+            <div class="ExperienceCard__Item_Company">
+              Brad Zickafoose Photography
+            </div>
+            <div class="ExperienceCard__Item_Date">Jun 2012 - Present</div>
+        </div>
+        <div class="ExperienceCard__Item">
+            <h3>Digital Project Manager</h3>
+            <div class="ExperienceCard__Item_Company">
+              Crestline Hotels &amp; Resorts
+            </div>
+            <div class="ExperienceCard__Item_Date">Mar 2013 - May 2018</div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="EducationCard" id="education">
+      <h2 class="EducationCard__Title">Education</h2>
+      <div class="EducationCard__Items">
+        <div class="EducationCard__Item">
+          <img src="/img/lambda.jpg" alt="Lambda School logo" class="EducationCard__Item_Image">
+          <a href="https://lambdaschool.com/"><h3>Lambda School</h3></a>
+        </div>
+        <div class="EducationCard__Item">
+            <img src="/img/nrcc.png" alt="New River Community College logo" class="EducationCard__Item_Image">
+            <a href="https://nr.edu/"><h3>New River Community College</h3></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="Footer" id="footer">
+    <div class="Footer__Copyright">
+      &copy 2019 BlinkedIn
+    </div>
+  </footer>
 </body>
+
 </html>

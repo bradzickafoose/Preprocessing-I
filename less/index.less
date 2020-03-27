@@ -3,20 +3,92 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap');
+@HeaderFont: 'Open Sans', sans-serif;
+@BodyFont: 'Montserrat', sans-serif;
+@BlinkedInBrand: #0077b5;
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,25 +96,45 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
+	font-family: @BodyFont;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -50,10 +142,158 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
 }
 
+body {
+	line-height: 1.2;
+}
+
+h1,h2,h3 {
+	font-family: @HeaderFont;
+}
+
+/* Mixins */
+.Card() {
+	background-color: #fff;
+	border: 1px solid #d0d0d0;
+	border-radius: 2px;
+	border-top: 4px solid @BlinkedInBrand;
+	box-shadow: 0 0 4px 1px rgba(0,0,0,.15);
+	padding: 1rem;
+	margin-top: 1rem;
+}
+
+.CardHeading() {
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin-bottom: 1%;
+}
+
+/* Header */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+
+	@media (max-width: 530px) {
+		flex-direction: column;
+	}
+
+	h1 {
+		font-size: 2rem;
+		width: 35%;
+		color: @BlinkedInBrand;
+	}
+
+	nav {
+		width: 60%;
+		display: flex;
+		justify-content: space-between;
+		
+		@media (max-width: 530px) {
+			margin-top: 1rem;
+			width: 90%;
+		}
+
+		a {
+			color: #283e4a;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+main {
+	padding: 1rem;
+}
+
+.ProfileCard {
+
+	.ProfileCard__ProfileImage{
+		background-color: rgb(241, 241, 241);
+		border: 1px solid #ddd;
+		border-radius: 50%;
+		box-shadow: 0 0 4px 1px rgba(0,0,0,.15);
+		padding: .5%;
+	}
+	.ProfileCard__User {
+		display: flex;
+		flex-direction: column;
+		margin-top: -10%;
+		padding: 0 2%;
+
+		img {
+			width: 20%;
+		}
+		
+		.ProfileCard__User_Info {
+			margin-top: 2%;
+
+			h1 {
+				font-weight: bold;
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+.AboutCard, .ExperienceCard, .EducationCard {
+	.Card();
+
+	h2 {
+		.CardHeading() 
+	}
+}
+
+.ExperienceCard {
+
+	.ExperienceCard__Items {
+		
+		.ExperienceCard__Item {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: nowrap;
+			font-size: .8rem;
+
+			h3 {font-weight: bold;}
+
+			.ExperienceCard__Item_Company {
+				text-align: left;
+			}
+		}
+	}
+}
+
+.EducationCard {
+
+	.EducationCard__Items {
+		
+		.EducationCard__Item {
+			display: flex;
+			align-items: center;
+			margin-bottom: 2%;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.EducationCard__Item_Image {
+				width: 10%;
+				margin-right: 2%;
+			}
+			
+		}
+	}
+}
